@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vIh-r8-FpX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ㄇㄉㄈㄎ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tenyears" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-0b-lO9">
+                                <rect key="frame" x="0.0" y="64" width="185" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="bCq-Wf-36g"/>
+                                </constraints>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TLV-AK-piB">
+                                <rect key="frame" x="0.0" y="356" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="570691970.50511098">
+                                    <!--2019-02-01 05:32:50 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="220878000">
+                                    <!--2008-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="536497200">
+                                    <!--2018-01-01 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datepick:" destination="BYZ-38-t0r" eventType="valueChanged" id="zPl-7R-7E5"/>
+                                </connections>
+                            </datePicker>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2008" minValue="2008" maxValue="2018" translatesAutoresizingMaskIntoConstraints="NO" id="j0s-cr-bcT">
+                                <rect key="frame" x="57" y="580" width="271.5" height="31"/>
+                                <connections>
+                                    <action selector="yearslider:" destination="BYZ-38-t0r" eventType="valueChanged" id="7W0-OW-rot"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKl-HX-rPu">
+                                <rect key="frame" x="10" y="584" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eib-l5-f7Q">
+                                <rect key="frame" x="334.5" y="584" width="38.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="西元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-TM-Gbf">
+                                <rect key="frame" x="101" y="318" width="51" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekR-iY-fI5">
+                                <rect key="frame" x="230" y="323" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2018" translatesAutoresizingMaskIntoConstraints="NO" id="wai-AC-Qfe">
+                                <rect key="frame" x="190" y="64" width="185" height="185"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WKl-HX-rPu" secondAttribute="bottom" constant="62" id="0r2-hg-J1d"/>
+                            <constraint firstItem="WKl-HX-rPu" firstAttribute="top" secondItem="TLV-AK-piB" secondAttribute="bottom" constant="12" id="0rF-Un-IdS"/>
+                            <constraint firstItem="Njp-0b-lO9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Kx-Kd-q3r"/>
+                            <constraint firstItem="wai-AC-Qfe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4ab-gG-adf"/>
+                            <constraint firstItem="j0s-cr-bcT" firstAttribute="leading" secondItem="WKl-HX-rPu" secondAttribute="trailing" constant="8" id="4xm-oS-pLc"/>
+                            <constraint firstItem="j0s-cr-bcT" firstAttribute="top" secondItem="TLV-AK-piB" secondAttribute="bottom" constant="8" id="5Va-Xk-8uU"/>
+                            <constraint firstItem="wai-AC-Qfe" firstAttribute="leading" secondItem="Njp-0b-lO9" secondAttribute="trailing" constant="5" id="9R5-nz-Fgr"/>
+                            <constraint firstItem="wai-AC-Qfe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ag2-Qp-3Q7"/>
+                            <constraint firstItem="TLV-AK-piB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FYa-R1-k8P"/>
+                            <constraint firstItem="eib-l5-f7Q" firstAttribute="top" secondItem="TLV-AK-piB" secondAttribute="bottom" constant="12" id="I6z-03-yPv"/>
+                            <constraint firstItem="WKl-HX-rPu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ldc-S2-tQp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eib-l5-f7Q" secondAttribute="bottom" constant="62" id="Lqn-8C-A35"/>
+                            <constraint firstItem="fFW-TM-Gbf" firstAttribute="top" secondItem="Njp-0b-lO9" secondAttribute="bottom" constant="69" id="SrN-kt-dat"/>
+                            <constraint firstItem="wai-AC-Qfe" firstAttribute="leading" secondItem="Njp-0b-lO9" secondAttribute="trailing" constant="5" id="U3a-l3-4GF"/>
+                            <constraint firstItem="ekR-iY-fI5" firstAttribute="top" secondItem="wai-AC-Qfe" secondAttribute="bottom" constant="74" id="UeB-al-9N9"/>
+                            <constraint firstItem="eib-l5-f7Q" firstAttribute="leading" secondItem="j0s-cr-bcT" secondAttribute="trailing" constant="8" id="WhK-hw-A2E"/>
+                            <constraint firstItem="TLV-AK-piB" firstAttribute="top" secondItem="fFW-TM-Gbf" secondAttribute="bottom" constant="8" id="Z6n-SZ-SnM"/>
+                            <constraint firstItem="j0s-cr-bcT" firstAttribute="top" secondItem="TLV-AK-piB" secondAttribute="bottom" constant="8" id="b7Q-Li-ZqR"/>
+                            <constraint firstItem="fFW-TM-Gbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="dYo-QD-ThG"/>
+                            <constraint firstItem="TLV-AK-piB" firstAttribute="top" secondItem="ekR-iY-fI5" secondAttribute="bottom" constant="12" id="e7X-eC-h8h"/>
+                            <constraint firstItem="j0s-cr-bcT" firstAttribute="leading" secondItem="WKl-HX-rPu" secondAttribute="trailing" constant="8" id="f46-jt-06l"/>
+                            <constraint firstItem="ekR-iY-fI5" firstAttribute="top" secondItem="wai-AC-Qfe" secondAttribute="bottom" constant="74" id="fFX-5V-qY2"/>
+                            <constraint firstItem="fFW-TM-Gbf" firstAttribute="top" secondItem="Njp-0b-lO9" secondAttribute="bottom" constant="69" id="fgI-Wf-R5s"/>
+                            <constraint firstItem="eib-l5-f7Q" firstAttribute="leading" secondItem="j0s-cr-bcT" secondAttribute="trailing" constant="8" id="h5a-UM-h8R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ekR-iY-fI5" secondAttribute="trailing" constant="112" id="hXF-4N-Yhs"/>
+                            <constraint firstItem="TLV-AK-piB" firstAttribute="top" secondItem="fFW-TM-Gbf" secondAttribute="bottom" constant="8" id="jFX-ns-MWP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eib-l5-f7Q" secondAttribute="trailing" constant="2" id="kfc-Ht-8Wu"/>
+                            <constraint firstItem="TLV-AK-piB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="m4o-Lt-HVT"/>
+                            <constraint firstItem="Njp-0b-lO9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nYx-JN-gZu"/>
+                            <constraint firstItem="ekR-iY-fI5" firstAttribute="leading" secondItem="fFW-TM-Gbf" secondAttribute="trailing" constant="78" id="r3w-uB-Esc"/>
+                            <constraint firstItem="ekR-iY-fI5" firstAttribute="leading" secondItem="fFW-TM-Gbf" secondAttribute="trailing" constant="78" id="vLE-En-PUA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ㄇㄉㄈㄎ" id="xdd-Qb-R4R"/>
+                    <connections>
+                        <outlet property="ageyear" destination="ekR-iY-fI5" id="teq-aD-cQL"/>
+                        <outlet property="beforepic" destination="Njp-0b-lO9" id="ZXO-51-vsT"/>
+                        <outlet property="date" destination="TLV-AK-piB" id="5hU-2r-CUf"/>
+                        <outlet property="yearslider" destination="j0s-cr-bcT" id="5rH-KP-RA3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1072.8" y="129.98500749625188"/>
+        </scene>
+        <!--ㄇㄉㄈㄎ-->
+        <scene sceneID="8pX-jo-LTY">
+            <objects>
+                <navigationController title="ㄇㄉㄈㄎ" automaticallyAdjustsScrollViewInsets="NO" id="vIh-r8-FpX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yec-Vk-7sy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LBJ-WW-bLw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1W1-iD-eCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="129.98500749625188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2018" width="185" height="185"/>
+    </resources>
 </document>
