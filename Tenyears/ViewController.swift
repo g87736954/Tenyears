@@ -26,16 +26,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func yearslider(_ sender: Any) {
-        let dateValue = DateFormatter()
-        dateValue.dateFormat = "YYYY"
-        yearslider.value = Float (dateValue.string(from: date.date))!
+//    @IBAction func yearslider(_ sender: Any) {
+//        let dateValue = DateFormatter()
+//        dateValue.dateFormat = "YYYY"
+//       yearslider.value = Float (dateValue.string(from: date.date))!
+//
+//
+//
+//        beforepic.image = UIImage(named: "\(Int(yearslider.value)).jpg")
+//        ageyear.text = String(Int(yearslider.value))
+//
+//
+//
+//    }
+    
+    
+    @IBAction func yearslider(_ sender: UISlider) {
+        sender.value = round(sender.value)
+        let year = Int(sender.value)
+        ageyear.text = String(year)
+        beforepic.image = UIImage(named: "\(year).jpg")
         
-        beforepic.image = UIImage(named: "\(Int(yearslider.value)).jpg")
-        ageyear.text = String(Int(yearslider.value))
-        
-        
-        
+        let newDate = DateComponents(calendar: Calendar.current,  year: year).date
+        date.date = newDate!
     }
     
     @IBAction func datepick(_ sender: Any) {
